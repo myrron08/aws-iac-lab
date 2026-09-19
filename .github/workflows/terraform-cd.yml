@@ -58,10 +58,7 @@ jobs:
         run: terraform validate -no-color
 
       - name: Terraform plan
-        run: terraform plan \
-          -input=false \
-          -lock-timeout=5m \
-          -out=tfplan
+        run: terraform plan -input=false -lock-timeout=5m -out=tfplan
 
       - name: Terraform apply
         run: terraform apply -input=false tfplan
