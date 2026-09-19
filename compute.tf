@@ -68,5 +68,9 @@ resource "aws_instance" "web" {
     Name = "${var.project_name}-${var.environment}-web"
   }
 
+  lifecycle {
+    ignore_changes = [ami]
+  }
+
   depends_on = [aws_iam_role_policy_attachment.ec2_ssm]
 }

@@ -35,3 +35,13 @@ output "ecr_repository_url" {
   description = "ECR repository URL"
   value       = aws_ecr_repository.app.repository_url
 }
+
+output "github_plan_role_arn" {
+  description = "IAM role used by GitHub Actions for Terraform plan"
+  value       = aws_iam_role.github_plan.arn
+}
+
+output "github_apply_role_arn" {
+  description = "IAM role used by GitHub Actions for Terraform apply"
+  value       = aws_iam_role.github_apply.arn
+}
