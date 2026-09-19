@@ -1,5 +1,5 @@
 locals {
-  github_repository      = "myrron08/aws-iac-lab"
+  github_repository      = "myrron08@263996203/aws-iac-lab@1374547690"
   terraform_state_bucket = "aws-iac-lab-tfstate-432342420991-eu-central-1"
   terraform_state_key    = "dev/terraform.tfstate"
 }
